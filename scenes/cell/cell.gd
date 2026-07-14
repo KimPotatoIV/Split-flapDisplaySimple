@@ -6,6 +6,7 @@ extends Node2D
 ##################################################
 func _ready() -> void:
 	sprite_2d_node.centered = false
+	sprite_2d_node.scale = Vector2(0.5, 0.5)
 
 ##################################################
 func set_texture(texture_value: Texture2D) -> void:

@@ -3,8 +3,8 @@ extends Node2D
 class_name DigitCell
 
 ##################################################
-const CELL_SIZE: Vector2 = Vector2(240.0, 180.0)
-const HALF_LINE_SIZE: Vector2 = Vector2(240.0, 4.0)
+const CELL_SIZE: Vector2 = Vector2(120.0, 90.0)
+const HALF_LINE_SIZE: Vector2 = Vector2(120.0, 4.0)
 const FLIP_DURATION: float = 0.15
 
 var current_value: int = -1
