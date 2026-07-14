@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bxf1q3xhvjfyp"]
+
+[ext_resource type="Script" uid="uid://5sgpqxsgwcwu" path="res://scenes/digit_cell/digit_cell.gd" id="1_8efgh"]
+[ext_resource type="PackedScene" uid="uid://m2y2msbfgvon" path="res://scenes/cell/cell.tscn" id="1_uewfx"]
+[ext_resource type="Texture2D" uid="uid://cb48iob7fntii" path="res://sprites/0_u.png" id="2_plw03"]
+[ext_resource type="Texture2D" uid="uid://c2q6fakdppxvm" path="res://sprites/1_u.png" id="3_wxohg"]
+[ext_resource type="Texture2D" uid="uid://bbv5i4pwgras7" path="res://sprites/2_u.png" id="4_v0lu7"]
+[ext_resource type="Texture2D" uid="uid://cucdmo0tayd5q" path="res://sprites/3_u.png" id="5_uhexp"]
+[ext_resource type="Texture2D" uid="uid://dboa11tlii7t1" path="res://sprites/4_u.png" id="6_d6yly"]
+[ext_resource type="Texture2D" uid="uid://yj75jd7wr5ku" path="res://sprites/5_u.png" id="7_68i45"]
+[ext_resource type="Texture2D" uid="uid://cvnmyvejdu7rc" path="res://sprites/6_u.png" id="8_51sla"]
+[ext_resource type="Texture2D" uid="uid://b0deduejvvtp5" path="res://sprites/7_u.png" id="9_u0s03"]
+[ext_resource type="Texture2D" uid="uid://ddp1ptpvx5h17" path="res://sprites/8_u.png" id="10_afd5j"]
+[ext_resource type="Texture2D" uid="uid://c50grebkheuo0" path="res://sprites/9_u.png" id="11_02bya"]
+[ext_resource type="Texture2D" uid="uid://bpgpx0prjt8sw" path="res://sprites/0_l.png" id="12_24agh"]
+[ext_resource type="Texture2D" uid="uid://byvyvev2pva86" path="res://sprites/1_l.png" id="13_wvjp1"]
+[ext_resource type="Texture2D" uid="uid://sl026wtujfso" path="res://sprites/2_l.png" id="14_i71ah"]
+[ext_resource type="Texture2D" uid="uid://dni7j4hu5g0ar" path="res://sprites/3_l.png" id="15_i7wpd"]
+[ext_resource type="Texture2D" uid="uid://c6xnnlhpl7rks" path="res://sprites/4_l.png" id="16_6rsyr"]
+[ext_resource type="Texture2D" uid="uid://ceacja67oqj3w" path="res://sprites/5_l.png" id="17_a64y3"]
+[ext_resource type="Texture2D" uid="uid://b8g17c6bxi1jm" path="res://sprites/6_l.png" id="18_v6c2r"]
+[ext_resource type="Texture2D" uid="uid://doogod53ufcqn" path="res://sprites/7_l.png" id="19_whf4u"]
+[ext_resource type="Texture2D" uid="uid://7h07b5w3p58b" path="res://sprites/8_l.png" id="20_gpe0u"]
+[ext_resource type="Texture2D" uid="uid://1i50ogu6rbpk" path="res://sprites/9_l.png" id="21_770ko"]
+
+[node name="DigitCell" type="Node2D" unique_id=1170435302]
+script = ExtResource("1_8efgh")
+upper_textures = Array[Texture2D]([ExtResource("2_plw03"), ExtResource("3_wxohg"), ExtResource("4_v0lu7"), ExtResource("5_uhexp"), ExtResource("6_d6yly"), ExtResource("7_68i45"), ExtResource("8_51sla"), ExtResource("9_u0s03"), ExtResource("10_afd5j"), ExtResource("11_02bya")])
+lower_textures = Array[Texture2D]([ExtResource("12_24agh"), ExtResource("13_wvjp1"), ExtResource("14_i71ah"), ExtResource("15_i7wpd"), ExtResource("16_6rsyr"), ExtResource("17_a64y3"), ExtResource("18_v6c2r"), ExtResource("19_whf4u"), ExtResource("20_gpe0u"), ExtResource("21_770ko")])
+
+[node name="HalfLine" type="ColorRect" parent="." unique_id=344952858]
+color = Color(0, 0, 0, 1)
+
+[node name="CellTop" parent="." unique_id=1176957523 instance=ExtResource("1_uewfx")]
+
+[node name="CellBottom" parent="." unique_id=1741222112 instance=ExtResource("1_uewfx")]
+
+[node name="FlipPivot" type="Node2D" parent="." unique_id=1900407058]
+
+[node name="Flip" parent="FlipPivot" unique_id=1674883908 instance=ExtResource("1_uewfx")]

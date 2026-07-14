@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://m2y2msbfgvon"]
+
+[ext_resource type="Script" uid="uid://c6fwuak2w2cvv" path="res://scenes/cell/cell.gd" id="1_ct601"]
+
+[node name="Cell" type="Node2D" unique_id=1176957523]
+script = ExtResource("1_ct601")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1346091412]
