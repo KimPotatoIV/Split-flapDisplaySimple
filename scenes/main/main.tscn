@@ -1,25 +1,45 @@
 [gd_scene format=3 uid="uid://ip8j0dcryrge"]
 
 [ext_resource type="Script" uid="uid://dmhvhyjj2ur03" path="res://scenes/main/main.gd" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://bxf1q3xhvjfyp" path="res://scenes/digit_cell/digit_cell.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://dxys3bwgtynie" path="res://scenes/hm/hm.tscn" id="3_l3cfh"]
+[ext_resource type="PackedScene" uid="uid://hpisk25q18qy" path="res://scenes/ms/ms.tscn" id="4_6q06x"]
+[ext_resource type="Texture2D" uid="uid://cyyrgokbf40ci" path="res://sprites/background.png" id="5_6q06x"]
 
-[node name="Main" type="Node2D" unique_id=1563753607]
+[node name="Main" type="Node2D" unique_id=1563753607 node_paths=PackedStringArray("digit_cell_hour_list", "digit_cell_minute_list", "digit_cell_second_list")]
 script = ExtResource("1_hyk8p")
+digit_cell_hour_list = [NodePath("Display/DigitCellH0"), NodePath("Display/DigitCellH1")]
+digit_cell_minute_list = [NodePath("Display/DigitCellM0"), NodePath("Display/DigitCellM1")]
+digit_cell_second_list = [NodePath("Display/DigitCellS0"), NodePath("Display/DigitCellS1")]
 
-[node name="Control" type="Control" parent="." unique_id=148481436]
-custom_minimum_size = Vector2(1920, 1080)
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Display" type="Node2D" parent="." unique_id=1520000546]
+position = Vector2(92, 108)
 
-[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1084325583]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+[node name="ColorRect" type="ColorRect" parent="Display" unique_id=152325879]
+custom_minimum_size = Vector2(1016, 184)
+offset_right = 1016.0
+offset_bottom = 184.0
+color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+
+[node name="DigitCellH0" parent="Display" unique_id=1170435302 instance=ExtResource("2_iuonh")]
+
+[node name="DigitCellH1" parent="Display" unique_id=1305221219 instance=ExtResource("2_iuonh")]
+
+[node name="HM" parent="Display" unique_id=1394741849 instance=ExtResource("3_l3cfh")]
+
+[node name="DigitCellM0" parent="Display" unique_id=1614933036 instance=ExtResource("2_iuonh")]
+
+[node name="DigitCellM1" parent="Display" unique_id=1334297962 instance=ExtResource("2_iuonh")]
+
+[node name="MS" parent="Display" unique_id=1526958489 instance=ExtResource("4_6q06x")]
+
+[node name="DigitCellS0" parent="Display" unique_id=2086508188 instance=ExtResource("2_iuonh")]
+
+[node name="DigitCellS1" parent="Display" unique_id=1653193697 instance=ExtResource("2_iuonh")]
+
+[node name="UpdateTimer" type="Timer" parent="Display" unique_id=1898064915]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=102524440]
+z_index = 100
+texture = ExtResource("5_6q06x")
+centered = false

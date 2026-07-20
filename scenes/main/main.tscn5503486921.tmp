@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ip8j0dcryrge"]
+
+[ext_resource type="Script" uid="uid://dmhvhyjj2ur03" path="res://scenes/main/main.gd" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://bxf1q3xhvjfyp" path="res://scenes/digit_cell/digit_cell.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://ctmv3agdng3my" path="res://scenes/y_m/ym.tscn" id="3_k2fmo"]
+
+[node name="Main" type="Node2D" unique_id=1563753607 node_paths=PackedStringArray("digit_cell_year_list", "digit_cell_month_list")]
+script = ExtResource("1_hyk8p")
+digit_cell_year_list = [NodePath("DigitCellY0"), NodePath("DigitCellY1"), NodePath("DigitCellY2"), NodePath("DigitCellY3")]
+digit_cell_month_list = [NodePath("DigitCellM0"), NodePath("DigitCellM1")]
+
+[node name="DigitCellY0" parent="." unique_id=1170435302 instance=ExtResource("2_iuonh")]
+
+[node name="DigitCellY1" parent="." unique_id=1305221219 instance=ExtResource("2_iuonh")]
+
+[node name="DigitCellY2" parent="." unique_id=1538430799 instance=ExtResource("2_iuonh")]
+
+[node name="DigitCellY3" parent="." unique_id=594667780 instance=ExtResource("2_iuonh")]
+
+[node name="DigitCellM0" parent="." unique_id=1729277634 instance=ExtResource("2_iuonh")]
+
+[node name="DigitCellM1" parent="." unique_id=645420923 instance=ExtResource("2_iuonh")]
+
+[node name="YM" parent="." unique_id=676097443 instance=ExtResource("3_k2fmo")]

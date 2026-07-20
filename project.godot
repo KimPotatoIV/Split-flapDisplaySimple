@@ -15,10 +15,14 @@ run/main_scene="uid://ip8j0dcryrge"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SM="*uid://fs2u5lnwhwf5"
+
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=1200
+window/size/viewport_height=400
 window/stretch/mode="viewport"
 
 [physics]
@@ -27,6 +31,7 @@ window/stretch/mode="viewport"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=3
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

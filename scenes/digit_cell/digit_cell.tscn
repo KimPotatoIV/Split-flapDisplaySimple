@@ -31,9 +31,9 @@ lower_textures = Array[Texture2D]([ExtResource("12_24agh"), ExtResource("13_wvjp
 [node name="HalfLine" type="ColorRect" parent="." unique_id=344952858]
 color = Color(0, 0, 0, 1)
 
-[node name="CellTop" parent="." unique_id=1176957523 instance=ExtResource("1_uewfx")]
+[node name="CellUpper" parent="." unique_id=1176957523 instance=ExtResource("1_uewfx")]
 
-[node name="CellBottom" parent="." unique_id=1741222112 instance=ExtResource("1_uewfx")]
+[node name="CellLower" parent="." unique_id=1741222112 instance=ExtResource("1_uewfx")]
 
 [node name="FlipPivot" type="Node2D" parent="." unique_id=1900407058]
 

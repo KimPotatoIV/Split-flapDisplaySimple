@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dxys3bwgtynie"]
+
+[ext_resource type="Texture2D" uid="uid://bjvuklfgyuc6d" path="res://sprites/c_u.png" id="1_wyjks"]
+[ext_resource type="Texture2D" uid="uid://cxhud7n6cyt3t" path="res://sprites/c_l.png" id="2_mu48m"]
+
+[node name="HM" type="Node2D" unique_id=1394741849]
+
+[node name="Upper" type="Sprite2D" parent="." unique_id=605664470]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_wyjks")
+centered = false
+
+[node name="HalfLine" type="ColorRect" parent="." unique_id=478992125]
+custom_minimum_size = Vector2(120, 4)
+offset_top = 90.0
+offset_right = 120.0
+offset_bottom = 94.0
+color = Color(0, 0, 0, 1)
+
+[node name="Lower" type="Sprite2D" parent="." unique_id=1735187168]
+position = Vector2(0, 94)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mu48m")
+centered = false
